@@ -5,13 +5,13 @@
 class GitSlot < Formula
   desc "Manage git worktrees as fixed, named slots"
   homepage "https://github.com/AquiTCD/git-slot"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.0/git-slot_0.4.0_darwin_amd64.tar.gz"
-      sha256 "eeb9d36b9ed92460dc02edd5293a9d8cac439b0154382a461368fbb30ba899bf"
+      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.1/git-slot_0.4.1_darwin_amd64.tar.gz"
+      sha256 "1fce70c7d6c6ce61141010873b399417bb76793180979c6d34ed27e799249304"
 
       define_method(:install) do
         bin.install "git-slot"
@@ -19,8 +19,8 @@ class GitSlot < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.0/git-slot_0.4.0_darwin_arm64.tar.gz"
-      sha256 "50b9b4a400093efe07d0bc51e525fa503d0b0452258f25ea0435a2680763ad54"
+      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.1/git-slot_0.4.1_darwin_arm64.tar.gz"
+      sha256 "3729290ef00984e75c9710f3e617f342fd7daa6ee3f1887e947fbbe9f2b4f9b5"
 
       define_method(:install) do
         bin.install "git-slot"
@@ -31,16 +31,16 @@ class GitSlot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.0/git-slot_0.4.0_linux_amd64.tar.gz"
-      sha256 "c8c46bf2c60f92218672b222a9b513f26b1e6c1764578dd3da4b7d73aadab085"
+      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.1/git-slot_0.4.1_linux_amd64.tar.gz"
+      sha256 "ef0dccdc656bddf821a62a4bec8fc3452f01a019a2e483f13c8d92b213528ac9"
       define_method(:install) do
         bin.install "git-slot"
         generate_completions_from_executable(bin/"git-slot", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.0/git-slot_0.4.0_linux_arm64.tar.gz"
-      sha256 "586d9156244b3eb94e166ebd89893b07a1e3a8f7fc68dd50563e645b2de314e3"
+      url "https://github.com/AquiTCD/git-slot/releases/download/v0.4.1/git-slot_0.4.1_linux_arm64.tar.gz"
+      sha256 "2e020edc4c5eee0b9de2c4e2d45df618c47eee35994ff11e9dc8ff03b477b2c1"
       define_method(:install) do
         bin.install "git-slot"
         generate_completions_from_executable(bin/"git-slot", "completion")
